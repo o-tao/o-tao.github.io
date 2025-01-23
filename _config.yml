@@ -1,5 +1,5 @@
 # Site
-repository: sproogen/resume-theme
+repository: o-tao/o-tao.github.io
 favicon: images/favicon.ico
 
 # Content configuration version
@@ -7,33 +7,34 @@ version: 2
 
 # Personal info
 name: 오상민
-title:
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+title: Back-end Developer
+email: osmin9027@gmail.com
+website: www.github.com/o-tao
+blog: https://tao-tech.tistory.com
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: never
 
 # Social links
-twitter_username: facespics
-github_username:  sproogen
+#twitter_username: facespics
+github_username:  o-tao
 # stackoverflow_username: "00000001"
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-instagram_username: jameswgrant
-linkedin_username: jameswgrant
+#instagram_username: jameswgrant
+#linkedin_username: jameswgrant
 # xing_username: jekyll
 # pinterest_username: jekyll
-youtube_username: globalmtb
+#youtube_username: globalmtb
 # googleplus_username: +jekyll
 # orcid_username: 0000-0000-0000-0000
 
 # Additional icon links
 additional_links:
 - title: itsgoingto.be
-  icon: fas fa-globe
-  url: https://www.itsgoingto.be
+  icon: fas fa-Tistory
+  url: https://tao-tech.tistory.com
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
 #   url: Link url (eg. https://google.com)
@@ -45,12 +46,21 @@ additional_links:
 # google_analytics: "UA-00000000-0"
 
 # About Section
-# about_title: About Me
+about_title: 자기소개
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
-
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+  <strong>저는 웹 서버 개발의 전체 사이클을 스스로 학습하고 구현한 경험이 있습니다.</strong>
+  ERD 설계 및 API 구현부터 AWS EC2, RDS(MySQL) ElastiCache(Redis)를 활용한 인프라 구축,
+  GitHub Actions CI/CD, AWS S3, CodeDeploy를 활용한 자동화 배포 까지 전 과정을 직접 구성하였습니다.
+  
+  <strong>저는 문제를 성장의 기회로 삼아 더 나은 결과를 만들어내는 데에 몰입합니다.</strong>
+  기술적 한계나 문제에 직면했을 때 그것을 기회삼아 학습하여 해결 방안을 찾고, 팀원과 공유하여 다수의 피드백을 얻어 함께 기술적 문제를 해결하고 성장하는 것에 큰 성취감을 얻습니다. 문제 해결 시간 단축을 위해 작업을 작은 단위의 Task로 분리하고, 코드 리뷰를 통해 협업을 고려한 코드 작성과 유지보수성을 높이는 방식을 고민했습니다.
+  이 과정에서 테스트 코드를 작성하며 코드의 신뢰성을 높이는 습관을 자연스럽게 익혔고, 스스로 학습한 지식을 정리하여 팀원에게 공유해 더 나은 결과를 만들어내는 데에 몰입하며 성장해왔습니다.
+  
+  <strong>마지막으로, 저는 경험을 공유하여 함께 성장하는 것에 큰 가치를 느낍니다.</strong>
+  누군가에게 설명할 수 있을 때 비로소 저의 지식이 되고, 그것이 곧 저의 성장이 된다고 생각합니다.
+  학습한 내용과 경험을 공유하고 피드백을 얻는 것에 큰 보람을 느껴 꾸준히 블로그에 기록하고 있습니다.
+  지속적인 학습과 개선을 통해 좋은 영향을 주어 함께 성장하는 개발자가 되고자 합니다.
 
 content:
   - title: Projects # Title for the section
