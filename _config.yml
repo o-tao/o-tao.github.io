@@ -107,7 +107,7 @@ content:
           **주요 역할**
           - **프로젝트 ERD 설계**: 데이터 모델링 및 관계 설계를 통한 데이터 구조 구축
           - **공통 모듈 개발**: AWS SES를 활용하여 서비스 전반에서 재사용 가능한 이메일 발송 모듈 구현 <a href="https://tao-tech.tistory.com/25" target="_blank"> <img src="https://t1.daumcdn.net/cfile/tistory/9935084A5B9541D014?style=flat-square&logo=Tistory&logoColor=white" width="15" alt="Tistory"> </a>
-          - **결제 일정 리마인드** 기능 개발: Spring Scheduler를 활용하여 구독 결제일 하루 전 사용ㅇ자에게 자동으로 이메일 리마인드 발송 구현
+          - **결제 일정 리마인드 기능 개발**: Spring Scheduler를 활용하여 구독 결제일 하루 전 사용자에게 자동으로 이메일 리마인드 발송 구현
           - **구독 서비스 그룹 기능 개발**: 구독 서비스를 공유하는 사용자 간 그룹 형성 및 그룹원 간 지출 금액 1/n 분담 로직 구현   
           
           **기술 스택**
