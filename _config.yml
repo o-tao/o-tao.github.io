@@ -105,15 +105,33 @@ content:
           점차 다양해지는 구독 서비스와 고정 지출을 똑똑하게 관리하기 위한 플랫폼
         description: | # this will include new lines to allow paragraphs
           **주요 역할**
-          - **프로젝트 ERD 설계**: 데이터 모델링 및 관계 설계를 통한 데이터 구조 구축
-          - **공통 모듈 개발**: AWS SES를 활용하여 서비스 전반에서 재사용 가능한 이메일 발송 모듈 구현 <a href="https://tao-tech.tistory.com/25" target="_blank"> <img src="https://t1.daumcdn.net/cfile/tistory/9935084A5B9541D014?style=flat-square&logo=Tistory&logoColor=white" width="15" alt="Tistory"> </a>
-          - **결제 일정 리마인드 기능 개발**: Spring Scheduler를 활용하여 구독 결제일 하루 전 사용자에게 자동으로 이메일 리마인드 발송 구현
+          **프로젝트 ERD 설계**
+          - 데이터 모델링 및 관계 설계를 통한 데이터 구조 구축
+          
+          **공통 모듈 개발**
+          - AWS Simple Email Service(SES)를 활용하여 서비스 전반에서 재사용 가능한 이메일 발송 모듈 구현 <a href="https://tao-tech.tistory.com/25" target="_blank"> <img src="https://t1.daumcdn.net/cfile/tistory/9935084A5B9541D014?style=flat-square&logo=Tistory&logoColor=white" width="15" alt="Tistory"> </a>
+          
+          **결제 일정 리마인드 기능 개발**
+          - Spring Scheduler를 활용하여 구독 결제일 하루 전 사용자에게 자동으로 이메일 리마인드 발송 구현
+          
+          **구독 서비스 관리 기능 개발**
+          - 사용자 구독항목 CRUD 기능, 구독 서비스 리스트, 검색 기능 개발
+          - 구독항목 생성 전 구독 서비스 선택란을 각각의 코드값으로 하여 리스트 응답 처리, QueryDSL의 동적 쿼리를 활용하여 Like 검색 기능 구현
+          - 사용자 구독항목 리스트 QueryDSL의 동적 쿼리를 활용하여 no-offset 방식의 페이징 처리
+          
+          **알림 관리 기능 개발**
+          - 회원가입, 결제 알림 등 애플리케이션 내 알림에 대한 CURD 기능 개발
+          - QueryDSL의 동적 쿼리를 활용해 no-offset 방식의 페이징 처리
+          - 알림 읽음 처리 시 벌크 업데이트 적용
+          - 알림 삭제 시 벌크 삭제 적용
           
           **기술 스택**
           - **Backend**: Java, SpringBoot, SpringDataJPA, QueryDSL, SpringSecurity, JUnit5
           - **Database**: MySQL, Redis, H2(테스트)
           - **DevOps**: AWS, Docker
           - **Tools**: Jira, Swagger, Git
+               
+          ---
 
       - layout: left
         title: TodoList
@@ -148,6 +166,8 @@ content:
           - **Database**: MySQL, Redis, H2(테스트)
           - **DevOps**: AWS (EC2, RDS, ElastiCache, S3, CodeDeploy), Docker
           - **Tools**: Git
+              
+          ---
 
       - layout: left
         title: WarriorDining
