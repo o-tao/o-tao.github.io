@@ -76,7 +76,7 @@ content:
         description: |
           - MySQL, MariaDB
           - AWS (EC2, RDS, ElastiCache, S3, CodeDeploy)
-          - Docker
+          - Docker Compose
       - layout: left
         title: Tools
         description: |
