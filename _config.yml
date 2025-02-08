@@ -113,6 +113,7 @@ content:
           
           **결제 일정 리마인드 기능 개발**
           - Spring Scheduler를 활용하여 구독 결제일 하루 전 사용자에게 자동으로 이메일 리마인드 발송 구현
+          - 서비스 확장성을 고려하여 Scale-out 환경에서 Scheduler의 중복 실행을 방지하기 위해 Redis 분산락 기반의 Shedlock 적용 <a href="https://tao-tech.tistory.com/31" target="_blank"> <img src="https://t1.daumcdn.net/cfile/tistory/9935084A5B9541D014?style=flat-square&logo=Tistory&logoColor=white" width="15" alt="Tistory"> </a>
           
           **구독 서비스 관리 기능 개발**
           - 사용자 구독항목 CRUD 기능, 구독 서비스 리스트, 검색 기능 개발
