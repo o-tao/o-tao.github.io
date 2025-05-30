@@ -69,7 +69,7 @@ content:
         title: Backend
         description: | # this will include new lines to allow paragraphs
           - Java, SpringBoot
-          - SpringDataJPA, QueryDSL
+          - SpringDataJPA, MyBatis, QueryDSL
           - JUnit5
       - layout: left
         title: DevOps
