@@ -223,6 +223,11 @@ content:
           - React.js와 Springboot 활용 자바(JAVA) 풀스택(프론트엔드&백엔드)개발자
           - JAVA 프로그래밍 언어 등 디지털 기술을 기반으로 다양한 기기의 융합, 콘텐츠의 융합을 통해 모바일 플랫폼에서 활용할 수 있는 웹&앱 콘텐츠의 기획, 구현, 설계, 제작, 운용 및 시험을 수행하는 업무를 수행
 
+      - layout: left
+        title: 학점은행제
+        sub_title: 컴퓨터공학 전공
+        caption: 2022.09 ~ 재학중
+
 # Footer
 footer_show_references: true
 # references_title: References on request (Override references text)
