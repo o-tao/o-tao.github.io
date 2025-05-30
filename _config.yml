@@ -82,15 +82,25 @@ content:
         description: |
           - IntelliJ, Jira, Slack, Git
 
-  - title: 교육 # Title for the section
+  - title: 경력 # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: 하이미디어 아카데미
-        caption: 2024.05 ~ 2024.10 수료
+        title: BU Technology
+        sub_title: 기술교범팀 Fullstack
+        caption: 2025.03 ~ 현재 재직중
         description: | # this will include new lines to allow paragraphs
-          - React.js와 Springboot 활용 자바(JAVA) 풀스택(프론트엔드&백엔드)개발자
-          - JAVA 프로그래밍 언어 등 디지털 기술을 기반으로 다양한 기기의 융합, 콘텐츠의 융합을 통해 모바일 플랫폼에서 활용할 수 있는 웹&앱 콘텐츠의 기획, 구현, 설계, 제작, 운용 및 시험을 수행하는 업무를 수행
+          **기존 서비스 유지보수 및 SpringMVC 기반 레거시 시스템을 SpringBoot 기반으로의 이관에 참여**
+          
+          **공통 모듈 개발**
+          - 콘텐츠 유형별 링크 이동, 이미지 표출 방식, 자료 유형별 메인 페이지 렌더링을 위한 서버 사이드 공통 비즈니스로직을 모듈화하여 서비스 전반의 데이터 처리 및 API 응답 일관성 확보
+          - 프론트엔드 화면 구성과 연계되는 공통 처리 로직의 재사용성을 높이기 위해 객체 및 컴포넌트 기반 구조로 설계
+          - 중복 코드 제거를 통해 전체 개발 효율성과 유지보수성 향상
+          
+          **사용자 접속 및 행동 로그 수집, 처리 및 통계 기능 개발**
+          - 사용자 접속 및 콘텐츠 이용 로그 수집, 저장, 처리 기능 구현, 이를 위한 REST API 제공
+          - 프론트엔드 관리자 페이지에서 통계 데이터를 시각화하기 위해 ECharts를 활용한 시각화 컴포넌트를 개발 및 연동
+          - 전체, 연도별, 월별, 일별 접속자 수, 책자별 조회 통계 등 지표를 시각화하여 운영 인사이트 제공
 
   - title: 프로젝트 # Title for the section
     layout: list # Type of content section (list/text)
@@ -99,10 +109,10 @@ content:
         title: 구똑 - 구독을 똑똑하게
         sub_title: Backend
         caption: |
-          <p>2024.12 ~ </p>
+          <p>2024.12 ~ 2025.05</p>
           <a href="https://github.com/TeamGuttok/back" target="_blank"> <img src="https://img.shields.io/badge/gitHub%20Repository-Back-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="github"> </a>
           <br/>
-          <p>운영 사이트</p>
+          <p>웹 사이트</p>
           <a href="https://www.guttok.site" target="_blank"> <img src="https://img.shields.io/badge/Guttok.site-Website-%2300C853.svg?style=for-the-badge&logo=googlechrome&logoColor=white" alt="website"> </a>
         quote: >
           점차 다양해지는 구독 서비스와 고정 지출을 똑똑하게 관리하기 위한 플랫폼
@@ -202,6 +212,16 @@ content:
           - **Frontend**: React.js(JavaScript)
           - **Database**: MariaDB
           - **DevOps**: Docker
+
+  - title: 교육 # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: 하이미디어 아카데미
+        caption: 2024.05 ~ 2024.10 수료
+        description: | # this will include new lines to allow paragraphs
+          - React.js와 Springboot 활용 자바(JAVA) 풀스택(프론트엔드&백엔드)개발자
+          - JAVA 프로그래밍 언어 등 디지털 기술을 기반으로 다양한 기기의 융합, 콘텐츠의 융합을 통해 모바일 플랫폼에서 활용할 수 있는 웹&앱 콘텐츠의 기획, 구현, 설계, 제작, 운용 및 시험을 수행하는 업무를 수행
 
 # Footer
 footer_show_references: true
