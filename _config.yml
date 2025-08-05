@@ -132,6 +132,55 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
+        title: CharmingLab-eva
+        sub_title: FullStack
+        caption: |
+          <p>2025.07.24 ~ 진행중</p>
+        quote: >
+          OpenAI를 활용한 업무 자동화 플랫폼
+        description: | # this will include new lines to allow paragraphs
+          **주요 역할**
+          
+          **멀티 모듈 아키텍처 구성**
+          - admin, worker, domain으로 구성된 멀티모듈 구조 설계
+          - domain: JPA Entity 중심의 라이브러리 모듈
+          - admin: 개발자용 API 및 서버 상태 관리
+          - worker: 크롤링 및 AI 기반 업무 자동화 수행
+        
+          **admin 모듈 기능 개발**
+          - 서버 상태 체크 기능 구현
+            - Scheduler 실행주기: fixedRate = 600000 (작업 시작 기준 10분)
+            - 정상 응답 시 heartbeatAt 필드 갱신
+          - 일감 생성 기능 설계 및 구현
+            - 유저별 실행 정책을 통해 동적 일감 생성
+            - 업무 시간(ex: 09:00 ~ 18:00)에만 일감이 생성되도록 구현
+            - 분단위 지정 시간(ex: 30분 - 60분) 내 무작위 시점에 생성
+          
+          **worker 모듈 기능 개발**
+          - 크롤링 기능 설계 및 구현
+            - admin 모듈에서 생성한 PENDING 상태의 일감에 대해 크롤링 작업 수행
+            - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
+            - Selenium을 통해 게시글 제목, 본문, 작성 시간 수집
+            - 수집 데이터는 AiApprovalTask 테이블에 PENDING 상태로 저장
+          - AI 필터링 기능 구현
+            - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
+            - 크롤링 작업에서 생상한 PENDING 상태의 AiApprovalTask에 대해 작업 수행
+            - AI가 사용자의 지침에 따라 AI_APPROVAL / AI_REJECTION 상태로 Reason과 함께 자동 분류
+          - AI, Selenium 기반 업무 자동화 처리
+            - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
+            - AiApprovalTask의 AI_APPROVAL 상태에 대해 게시글 자동 응답 생성, 생성된 일감 GENERATED 상태로 업데이트
+            - GENERATED 상태의 업무를 사용자 직접 승인, 거부에 따른 업데이트
+            - 유저가 승인한(USER_APPROVAL)업무에 대해 Selenium을 활용하여 유저 실행정책을 통한 코멘트 작성 자동화
+          
+          **기술 스택**
+          - **Backend**: Kotlin, SpringBoot, SpringDataJPA, QueryDSL, Selenium, OpenAI
+          - **Database**: MySQL
+          - **DevOps**: Docker Compose
+          - **Tools**: Git
+          
+          ---      
+
+      - layout: left
         title: 구똑 - 구독을 똑똑하게
         sub_title: Backend
         caption: |
