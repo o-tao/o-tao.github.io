@@ -97,10 +97,36 @@ content:
           - 프론트엔드 화면 구성과 연계되는 공통 처리 로직의 재사용성을 높이기 위해 객체 및 컴포넌트 기반 구조로 설계
           - 중복 코드 제거를 통해 전체 개발 효율성과 유지보수성 향상
           
-          **사용자 접속 및 행동 로그 수집, 처리 및 통계 기능 개발**
-          - 사용자 접속 및 콘텐츠 이용 로그 수집, 저장, 처리 기능 구현, 이를 위한 REST API 제공
-          - 프론트엔드 관리자 페이지에서 통계 데이터를 시각화하기 위해 ECharts를 활용한 시각화 컴포넌트를 개발 및 연동
-          - 전체, 연도별, 월별, 일별 접속자 수, 책자별 조회 통계 등 지표를 시각화하여 운영 인사이트 제공
+          **관리자 시스템 기능 개발**
+          
+          📈 사용자 접속 로그 수집, 처리 및 통계 기능 개발
+            - 사용자 접속 로그 수집, 저장, 처리 기능 구현, 이를 위한 REST API 제공
+            - 프론트엔드 관리자 페이지에서 통계 데이터를 시각화하기 위해 ECharts를 활용한 시각화 컴포넌트를 개발 및 연동
+            - 전체, 연도별, 월별, 일별 접속자 수, 책자별 조회 통계 등 지표를 시각화하여 운영 인사이트 제공
+          
+          🧭 사용자 행동 로그 수집, 처리 기능 개발
+            - 사용자 콘텐츠 이용 및 행동 로그 수집, 저장, 처리를 위한 REST API 개발
+            - 로그 코드, 명칭, 설명, 등록일 기준의 로그 테이블 시각화 처리
+            - 날짜 기준 검색 및 offset 기반 페이지네이션 처리 구현을 통해 로그 탐색 편의성 강화
+          
+          📝 용어 편집 기능 개발
+            - 관리자가 용어 정보를 등록, 수정, 삭제할 수 있는 CRUD 기능 구현
+          
+          🌐 다국어(i18n) 처리
+          - Spring Message Properties 기반의 다국어 처리 및 동적 언어 전환 기능 구현
+          
+          📂 콘텐츠 변경 이력 기능 개발
+            - 콘텐츠 변경 이력을 트리 구조로 시각화하여 운영 인사이트 제공
+            - 변경 버전별 상세 정보 확인 기능 구현
+          
+          **개발 생산성 기여**
+            - Docker Compose를 통해 데이터베이스 기본 사용자 설정 및 초기 데이터 자동화 구성
+              - 평균 개발 환경 세팅 시간 수일 → 약 10분으로 단축
+            - 통합 테스트를 위한 일관된 테스트 환경 제공
+              - Docker 기반 컨테이너화된 SpringBoot 앱 이미지 제공, 팀원들이 동일한 데이터 환경에서 테스트 가능하도록 지원
+            - 사내 미니 프로젝트: OpenAI 기반 코드 리팩토링 제안 기능 구현
+              - 특정 커밋에 대해 사내 코드 규칙 기반 Prompt 작성
+              - OpenAI를 통해 코드 리뷰 및 리팩토링 방향을 Slack 메세지로 자동 제안
 
   - title: 프로젝트 # Title for the section
     layout: list # Type of content section (list/text)
@@ -111,9 +137,6 @@ content:
         caption: |
           <p>2024.12 ~ 2025.05</p>
           <a href="https://github.com/TeamGuttok/back" target="_blank"> <img src="https://img.shields.io/badge/gitHub%20Repository-Back-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="github"> </a>
-          <br/>
-          <p>웹 사이트</p>
-          <a href="https://www.guttok.site" target="_blank"> <img src="https://img.shields.io/badge/Guttok.site-Website-%2300C853.svg?style=for-the-badge&logo=googlechrome&logoColor=white" alt="website"> </a>
         quote: >
           점차 다양해지는 구독 서비스와 고정 지출을 똑똑하게 관리하기 위한 플랫폼
         description: | # this will include new lines to allow paragraphs
