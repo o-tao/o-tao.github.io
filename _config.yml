@@ -91,33 +91,79 @@ content:
         caption: 2025.03 ~ 현재 재직중
         description: | # this will include new lines to allow paragraphs
           **기존 서비스 유지보수 및 SpringMVC 기반 레거시 시스템을 SpringBoot 기반으로의 이관에 참여**
+          - **공통 모듈 개발**
+            - 콘텐츠 유형별 링크 이동, 이미지 표출 방식, 자료 유형별 메인 페이지 렌더링을 위한 서버 사이드 공통 비즈니스로직을 모듈화하여 서비스 전반의 데이터 처리 및 API 응답 일관성 확보
+            - 프론트엔드 화면 구성과 연계되는 공통 처리 로직의 재사용성을 높이기 위해 객체 및 컴포넌트 기반 구조로 설계
+            - 중복 코드 제거를 통해 전체 개발 효율성과 유지보수성 향상
           
-          **공통 모듈 개발**
-          - 콘텐츠 유형별 링크 이동, 이미지 표출 방식, 자료 유형별 메인 페이지 렌더링을 위한 서버 사이드 공통 비즈니스로직을 모듈화하여 서비스 전반의 데이터 처리 및 API 응답 일관성 확보
-          - 프론트엔드 화면 구성과 연계되는 공통 처리 로직의 재사용성을 높이기 위해 객체 및 컴포넌트 기반 구조로 설계
-          - 중복 코드 제거를 통해 전체 개발 효율성과 유지보수성 향상
+          - **관리자 시스템 기능 개발**
           
-          **관리자 시스템 기능 개발**
+            📈 사용자 접속 로그 수집, 처리 및 통계 기능 개발
+              - 사용자 접속 로그 수집, 저장, 처리 기능 구현, 이를 위한 REST API 제공
+              - 프론트엔드 관리자 페이지에서 통계 데이터를 시각화하기 위해 ECharts를 활용한 시각화 컴포넌트를 개발 및 연동
+              - 전체, 연도별, 월별, 일별 접속자 수, 책자별 조회 통계 등 지표를 시각화하여 운영 인사이트 제공
           
-          📈 사용자 접속 로그 수집, 처리 및 통계 기능 개발
-            - 사용자 접속 로그 수집, 저장, 처리 기능 구현, 이를 위한 REST API 제공
-            - 프론트엔드 관리자 페이지에서 통계 데이터를 시각화하기 위해 ECharts를 활용한 시각화 컴포넌트를 개발 및 연동
-            - 전체, 연도별, 월별, 일별 접속자 수, 책자별 조회 통계 등 지표를 시각화하여 운영 인사이트 제공
+            🧭 사용자 행동 로그 수집, 처리 기능 개발
+              - 사용자 콘텐츠 이용 및 행동 로그 수집, 저장, 처리를 위한 REST API 개발
+              - 로그 코드, 명칭, 설명, 등록일 기준의 로그 테이블 시각화 처리
+              - 날짜 기준 검색 및 offset 기반 페이지네이션 처리 구현을 통해 로그 탐색 편의성 강화
           
-          🧭 사용자 행동 로그 수집, 처리 기능 개발
-            - 사용자 콘텐츠 이용 및 행동 로그 수집, 저장, 처리를 위한 REST API 개발
-            - 로그 코드, 명칭, 설명, 등록일 기준의 로그 테이블 시각화 처리
-            - 날짜 기준 검색 및 offset 기반 페이지네이션 처리 구현을 통해 로그 탐색 편의성 강화
+            📝 용어 편집 기능 개발
+              - 관리자가 용어 정보를 등록, 수정, 삭제할 수 있는 CRUD 기능 구현
           
-          📝 용어 편집 기능 개발
-            - 관리자가 용어 정보를 등록, 수정, 삭제할 수 있는 CRUD 기능 구현
+            🌐 다국어(i18n) 처리
+            - Spring Message Properties 기반의 다국어 처리 및 동적 언어 전환 기능 구현
           
-          🌐 다국어(i18n) 처리
-          - Spring Message Properties 기반의 다국어 처리 및 동적 언어 전환 기능 구현
+            📂 콘텐츠 변경 이력 기능 개발
+              - 콘텐츠 변경 이력을 트리 구조로 시각화하여 운영 인사이트 제공
+              - 변경 버전별 상세 정보 확인 기능 구현
+            
+            - **기술 스택**
+              - **Backend**: Java, SpringBoot, MyBatis, SpringSecurity
+              - **Database**: Oracle, MySQL, MariaDB
+              - **Tools**: Git
           
-          📂 콘텐츠 변경 이력 기능 개발
-            - 콘텐츠 변경 이력을 트리 구조로 시각화하여 운영 인사이트 제공
-            - 변경 버전별 상세 정보 확인 기능 구현
+          ---
+          
+          **업무 자동화 개발 참여**
+          - **멀티 모듈 아키텍처 구성**
+            - admin, worker, domain으로 구성된 멀티모듈 구조 설계
+            - domain: JPA Entity 중심의 라이브러리 모듈
+            - admin: 개발자용 API 및 서버 상태 관리
+            - worker: 크롤링 및 AI 기반 업무 자동화 수행
+          
+          - **admin 모듈 기능 개발**
+            - 서버 상태 체크 기능 구현
+              - Scheduler 실행주기: fixedRate = 600000 (작업 시작 기준 10분)
+              - 정상 응답 시 heartbeatAt 필드 갱신
+            - 일감 생성 기능 설계 및 구현
+              - 유저별 실행 정책을 통해 동적 일감 생성
+              - 업무 시간(ex: 09:00 ~ 18:00)에만 일감이 생성되도록 구현
+              - 분단위 지정 시간(ex: 30분 - 60분) 내 무작위 시점에 생성
+          
+          - **worker 모듈 기능 개발**
+            - 크롤링 기능 설계 및 구현
+              - admin 모듈에서 생성한 PENDING 상태의 일감에 대해 크롤링 작업 수행
+              - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
+              - Selenium을 통해 게시글 제목, 본문, 작성 시간 수집
+              - 수집 데이터는 AiApprovalTask 테이블에 PENDING 상태로 저장
+            - AI 필터링 기능 구현
+              - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
+              - 크롤링 작업에서 생상한 PENDING 상태의 AiApprovalTask에 대해 작업 수행
+              - AI가 사용자의 지침에 따라 AI_APPROVAL / AI_REJECTION 상태로 Reason과 함께 자동 분류
+            - AI, Selenium 기반 업무 자동화 처리
+              - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
+              - AiApprovalTask의 AI_APPROVAL 상태에 대해 게시글 자동 응답 생성, 생성된 일감 GENERATED 상태로 업데이트
+              - GENERATED 상태의 업무를 사용자 직접 승인, 거부에 따른 업데이트
+              - 유저가 승인한(USER_APPROVAL)업무에 대해 Selenium을 활용하여 유저 실행정책을 통한 코멘트 작성 자동화
+          
+          - **기술 스택**
+            - **Backend**: Kotlin, SpringBoot, SpringDataJPA, QueryDSL, Selenium, OpenAI
+            - **Database**: MySQL
+            - **DevOps**: Docker Compose
+            - **Tools**: Git
+          
+          ---
           
           **개발 생산성 기여**
             - Docker Compose를 통해 데이터베이스 기본 사용자 설정 및 초기 데이터 자동화 구성
@@ -131,55 +177,6 @@ content:
   - title: 프로젝트 # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: left
-        title: CharmingLab-eva
-        sub_title: FullStack
-        caption: |
-          <p>2025.07.24 ~ 진행중</p>
-        quote: >
-          OpenAI를 활용한 업무 자동화 플랫폼
-        description: | # this will include new lines to allow paragraphs
-          **주요 역할**
-          
-          **멀티 모듈 아키텍처 구성**
-          - admin, worker, domain으로 구성된 멀티모듈 구조 설계
-          - domain: JPA Entity 중심의 라이브러리 모듈
-          - admin: 개발자용 API 및 서버 상태 관리
-          - worker: 크롤링 및 AI 기반 업무 자동화 수행
-        
-          **admin 모듈 기능 개발**
-          - 서버 상태 체크 기능 구현
-            - Scheduler 실행주기: fixedRate = 600000 (작업 시작 기준 10분)
-            - 정상 응답 시 heartbeatAt 필드 갱신
-          - 일감 생성 기능 설계 및 구현
-            - 유저별 실행 정책을 통해 동적 일감 생성
-            - 업무 시간(ex: 09:00 ~ 18:00)에만 일감이 생성되도록 구현
-            - 분단위 지정 시간(ex: 30분 - 60분) 내 무작위 시점에 생성
-          
-          **worker 모듈 기능 개발**
-          - 크롤링 기능 설계 및 구현
-            - admin 모듈에서 생성한 PENDING 상태의 일감에 대해 크롤링 작업 수행
-            - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
-            - Selenium을 통해 게시글 제목, 본문, 작성 시간 수집
-            - 수집 데이터는 AiApprovalTask 테이블에 PENDING 상태로 저장
-          - AI 필터링 기능 구현
-            - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
-            - 크롤링 작업에서 생상한 PENDING 상태의 AiApprovalTask에 대해 작업 수행
-            - AI가 사용자의 지침에 따라 AI_APPROVAL / AI_REJECTION 상태로 Reason과 함께 자동 분류
-          - AI, Selenium 기반 업무 자동화 처리
-            - Scheduler 실행 주기: fixedDelay = 1000 (이전 작업이 끝난 후 1초)
-            - AiApprovalTask의 AI_APPROVAL 상태에 대해 게시글 자동 응답 생성, 생성된 일감 GENERATED 상태로 업데이트
-            - GENERATED 상태의 업무를 사용자 직접 승인, 거부에 따른 업데이트
-            - 유저가 승인한(USER_APPROVAL)업무에 대해 Selenium을 활용하여 유저 실행정책을 통한 코멘트 작성 자동화
-          
-          **기술 스택**
-          - **Backend**: Kotlin, SpringBoot, SpringDataJPA, QueryDSL, Selenium, OpenAI
-          - **Database**: MySQL
-          - **DevOps**: Docker Compose
-          - **Tools**: Git
-          
-          ---      
-
       - layout: left
         title: 구똑 - 구독을 똑똑하게
         sub_title: Backend
