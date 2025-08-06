@@ -118,10 +118,10 @@ content:
               - 콘텐츠 변경 이력을 트리 구조로 시각화하여 운영 인사이트 제공
               - 변경 버전별 상세 정보 확인 기능 구현
             
-            - **기술 스택**
-              - **Backend**: Java, SpringBoot, MyBatis, SpringSecurity
-              - **Database**: Oracle, MySQL, MariaDB
-              - **Tools**: Git
+          - **기술 스택**
+            - **Backend**: Java, SpringBoot, MyBatis, SpringSecurity
+            - **Database**: Oracle, MySQL, MariaDB
+            - **Tools**: Git
           
           ---
           
