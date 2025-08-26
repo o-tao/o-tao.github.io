@@ -158,9 +158,9 @@ content:
               - 유저가 승인한(USER_APPROVAL)업무에 대해 Selenium을 활용하여 유저 실행정책을 통한 코멘트 작성 자동화
           
           - **기술 스택**
-            - **Backend**: Kotlin, SpringBoot, SpringDataJPA, QueryDSL, Selenium, OpenAI
+            - **Backend**: Kotlin, SpringBoot, SpringDataJPA, QueryDSL, Selenium, OpenFeign, OpenAI
             - **Database**: MySQL
-            - **DevOps**: Docker Compose
+            - **DevOps**: AWS (EC2, RDS, CloudWatch), DockerCompose
             - **Tools**: Git
           
           ---
