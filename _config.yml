@@ -144,7 +144,7 @@ content:
 
           - **CI/CD 및 코드 품질 관리**
               - ktlint 기반 코드 컨벤션 검사를 CI 파이프라인에 적용하여 일관된 코드 품질 유지
-              - CD 스크립트 자동화를 통해 사용자별 전용 서버 (1 User : 1 Server) 병렬 배포 설계
+              - CD 스크립트 자동화를 통해 사용자별 전용 서버 (1 User : 1 Server) 로 구성하여 Worker 서버 5대 병렬 배포 설계
               - admin-domain(관리자 서버), worker-domain(사용자 서버) 별 분리 배포 설계
           
           - **개선 사항**
@@ -152,7 +152,7 @@ content:
               - DB Connection Pool 튜닝을 통해 병렬 처리 시 발생 가능한 리소스 경합 문제 해결
               - MDCContext + Logback을 통한 비동기 처리 작업 로그를 traceId로 관리하여 로그 추적성을 보장
               - 프로젝트 전체 사이클 [정보 수집 → AI 검토 → AI 자동 처리 → 사용자 검토 → 완료 처리] 을 비동기 파이프라인으로 구현, 각 단계 독립 실행 및 시스템 확장성 확보
-              - 기존 Selenium 기반 정보수집을 OpenFeign 기반으로 재구성하여 정보 수집 시간 10 ~ 30분 → 1 ~ 3초로 단축
+              - 기존 Selenium 기반 정보수집을 OpenFeign 기반으로 재구성하여 정보 수집 시간 10분 → 3초 (수집 속도 약 100% 향상)
           
           - **기술 스택**
             - **Backend**: Kotlin, SpringBoot, SpringDataJPA, QueryDSL, Selenium, OpenFeign, OpenAI
