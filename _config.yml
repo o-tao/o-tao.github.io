@@ -147,11 +147,13 @@ content:
               - CD 스크립트 자동화를 통해 사용자별 전용 서버 (1 User : 1 Server) 병렬 배포 설계
               - admin-domain(관리자 서버), worker-domain(사용자 서버) 별 분리 배포 설계
           
-          - 대시보드 통계 API의 다중 DB 조회 로직을 코루틴 기반 병렬 처리로 리팩토링하여, 기존 순차 실행 대비 응답 속도를 최대 40% 단축
-          - DB Connection Pool 튜닝을 통해 병렬 처리 시 발생 가능한 리소스 경합 문제 해결
-          - MDCContext + Logback을 통해 비동기 처리되는 작업에 대해 로그를 traceId로 관리하여 로그 추적성을 보장
-          - 프로젝트 전체 사이클 [정보 수집 -> AI 검토 -> AI 자동 처리 -> 사용자 검토 -> 완료 처리]을 비동기 파이프라인으로 구현하여, 각 단계가 독립적으로 실행되고 시스템 전체 응답성과 확장성을 확보
-      
+          - **개선 사항**
+              - 대시보드 통계 API의 다중 DB 조회 로직을 코루틴 기반 병렬 처리로 응답 속도 최대 40% 향상
+              - DB Connection Pool 튜닝을 통해 병렬 처리 시 발생 가능한 리소스 경합 문제 해결
+              - MDCContext + Logback을 통한 비동기 처리 작업 로그를 traceId로 관리하여 로그 추적성을 보장
+              - 프로젝트 전체 사이클 [정보 수집 → AI 검토 → AI 자동 처리 → 사용자 검토 → 완료 처리] 을 비동기 파이프라인으로 구현, 각 단계 독립 실행 및 시스템 확장성 확보
+              - 기존 Selenium 기반 정보수집을 OpenFeign 기반으로 재구성하여 정보 수집 시간 10 ~ 30분 → 1 ~ 3초로 단축
+          
           - **기술 스택**
             - **Backend**: Kotlin, SpringBoot, SpringDataJPA, QueryDSL, Selenium, OpenFeign, OpenAI
             - **Database**: MySQL
