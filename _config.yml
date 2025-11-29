@@ -49,17 +49,9 @@ github_username:  o-tao
 about_title: 자기소개
 about_profile_image: images/profile.png
 about_content: | # this will include new lines to allow paragraphs
-  **저는 웹 서버 개발의 전체 사이클을 스스로 학습하고 구현한 경험이 있습니다.** <br>
-  <p> ERD 설계 및 API 구현부터 AWS EC2, RDS(MySQL), ElastiCache(Redis)를 활용한 인프라 구축, GitHub Actions CI/CD, AWS S3, CodeDeploy를 활용한 자동화 배포 까지 전 과정을 직접 구성하였습니다. </p>
-  <br>
-  **저는 문제를 성장의 기회로 삼아 더 나은 결과를 만들어내는 데에 몰입합니다.** <br>
-  <p> 기술적 한계나 문제에 직면했을 때 그것을 기회삼아 학습하여 해결 방안을 찾고, 팀원과 공유하여 다수의 피드백을 얻어 함께 기술적 문제를 해결하고 성장하는 것에 큰 성취감을 얻습니다. 문제 해결 시간 단축을 위해 작업을 작은 단위의 Task로 분리하고, 코드 리뷰를 통해 협업을 고려한 코드 작성과 유지보수성을 높이는 방식을 고민했습니다. <br>
-  이 과정에서 테스트 코드를 작성하며 코드의 신뢰성을 높이는 습관을 자연스럽게 익혔고, 스스로 학습한 지식을 정리하여 팀원에게 공유해 더 나은 결과를 만들어내는 데에 몰입하며 성장해왔습니다. </p>
-  <br>
-  **마지막으로, 저는 경험을 공유하여 함께 성장하는 것에 큰 가치를 느낍니다.** <br>
-  <p> 누군가에게 설명할 수 있을 때 비로소 저의 지식이 되고, 그것이 곧 저의 성장이 된다고 생각합니다.<br>
-  학습한 내용과 경험을 공유하고 피드백을 얻는 것에 큰 보람을 느껴 꾸준히 블로그에 기록하고 있습니다.<br>
-  지속적인 학습과 개선을 통해 좋은 영향을 주어 함께 성장하는 개발자가 되고자 합니다. </p>
+  <p> 안녕하세요. 상황에 깊이 몰입하고 팀과 함께 성장하는 것을 지향하는 개발자 오상민입니다. </p>
+  <p> 저는 방위산업 IETM 소프트웨어 개발팀에서 근무하며, Spring MVC 기반 레거시 코드를 Spring Boot로 이관하는 작업을 수행하였습니다. 현재는 업그레이드된 소프트웨어 제품화와 사내 신사업 프로젝트에서, 초기 구조 설계 단계부터 개발에 참여해 경험을 쌓고 있습니다. </p>
+  <p> 업무 외에는 SaaS 형태의 서비스에도 관심을 가지고, 기획부터 개발, 서비스화까지 약 4주 내에 AI기반 법률 상담 업무 자동화 플랫폼을 개발하여 운영 중입니다. 해당 서비스는 현재 실제 변호사들이 업무에 활용하고 있으며, 운영 과정에서 발생하는 성능 저하와 장애를 해결하며 최근에는 '서비스를 안정적으로 굴리는 것'에 관심을 두고 있습니다. </p>
 
 content:
   - title: 기술 스택 # Title for the section
@@ -70,13 +62,12 @@ content:
         description: | # this will include new lines to allow paragraphs
           - Java, SpringBoot
           - SpringDataJPA, MyBatis, QueryDSL
-          - JUnit5
       - layout: left
         title: DevOps
         description: |
           - MySQL, MariaDB
+          - Docker
           - AWS (EC2, RDS, ElastiCache, S3, CodeDeploy, SES)
-          - Docker Compose
       - layout: left
         title: Tools
         description: |
@@ -86,15 +77,14 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: BU Technology
-        sub_title: 기술교범팀 Fullstack
-        caption: 2025.03 ~ 2025.07
+        title: KLT Systems
+        sub_title: 소프트웨어 개발팀 Fullstack
+        caption: 2025.03 ~ 재직중
         description: | # this will include new lines to allow paragraphs
           **기존 서비스 유지보수 및 SpringMVC 기반 레거시 시스템을 SpringBoot 기반으로의 이관에 참여**
           - **공통 모듈 개발**
             - 콘텐츠 유형별 링크 이동, 이미지 표출 방식, 자료 유형별 메인 페이지 렌더링을 위한 서버 사이드 공통 비즈니스로직을 모듈화하여 서비스 전반의 데이터 처리 및 API 응답 일관성 확보
             - 프론트엔드 화면 구성과 연계되는 공통 처리 로직의 재사용성을 높이기 위해 객체 및 컴포넌트 기반 구조로 설계
-            - 중복 코드 제거를 통해 전체 개발 효율성과 유지보수성 향상
           
           - **관리자 시스템 기능 개발**
           
@@ -125,43 +115,6 @@ content:
           
           ---
           
-          **법률 상담 자동화 시스템 개발**
-          - **멀티 모듈 아키텍처 설계 및 구현 주도**
-            - domain: JPA Entity 중심의 라이브러리형 모듈
-            - admin: 관리자 API, 정보 수집 중심의 모듈
-            - worker: 사용자 API, 업무 자동화 처리 중심의 모듈
-          
-          - **Admin 모듈 개발**
-            - worker 모듈 인스턴스 헬스체크 API 구현
-            - OpenFeign을 활용해 외부 웹 데이터를 스크래핑하여 실시간 정보 수집
-          
-          - **Worker 모듈 개발**
-            - OpenAI API를 통한 질문 적합성 검토 및 승인/미승인 기능 구현
-            - 질문 적합성 결과 승인된 작업에 대해 AI 기반 법률 상담 답변 생성 기능 구현
-            - 1차 자동화처리된 항목에 대해 사용자가 검토할 수 있도록 offset 기반 페이징처리 및 생성일 기준 오름차순, 내림차순 정렬을 지원하는 리스트 조회 구현
-            - 사용자가 AI기반으로 자동화처리된 작업을 검토하고 승인한 항목에 대해 Selenium기반 자동 답변 작성 기능 구현
-            - 사용자가 전체적인 작업 (일일 건수, 일/월별 그래프)현황 모니터링이 가능 하도록 대시보드 구현
-
-          - **CI/CD 및 코드 품질 관리**
-              - ktlint 기반 코드 컨벤션 검사를 CI 파이프라인에 적용하여 일관된 코드 품질 유지
-              - CD 스크립트 자동화를 통해 사용자별 전용 서버 (1 User : 1 Server) 로 구성하여 Worker 서버 5대 병렬 배포 설계
-              - admin-domain(관리자 서버), worker-domain(사용자 서버) 별 분리 배포 설계
-          
-          - **개선 사항**
-              - 대시보드 통계 API의 다중 DB 조회 로직을 코루틴 기반 병렬 처리로 응답 속도 최대 40% 향상
-              - DB Connection Pool 튜닝을 통해 병렬 처리 시 발생 가능한 리소스 경합 문제 해결
-              - MDCContext + Logback을 통한 비동기 처리 작업 로그를 traceId로 관리하여 로그 추적성을 보장
-              - 프로젝트 전체 사이클 [정보 수집 → AI 검토 → AI 자동 처리 → 사용자 검토 → 완료 처리] 을 비동기 파이프라인으로 구현, 각 단계 독립 실행 및 시스템 확장성 확보
-              - 기존 Selenium 기반 정보수집을 OpenFeign 기반으로 재구성하여 정보 수집 시간 10분 → 3초 (수집 속도 약 100% 향상)
-          
-          - **기술 스택**
-            - **Backend**: Kotlin, SpringBoot, SpringDataJPA, QueryDSL, Selenium, OpenFeign, OpenAI
-            - **Database**: MySQL
-            - **DevOps**: AWS (EC2, RDS, CloudWatch), DockerCompose
-            - **Tools**: Git
-          
-          ---
-          
           **개발 생산성 기여**
             - Docker Compose를 통해 데이터베이스 기본 사용자 설정 및 초기 데이터 자동화 구성
               - 평균 개발 환경 세팅 시간 수일 → 약 10분으로 단축
@@ -174,6 +127,50 @@ content:
   - title: 프로젝트 # Title for the section
     layout: list # Type of content section (list/text)
     content:
+      - layout: left
+        title: EVA - Evangelion Virtual Assistant
+        sub_title: Fullstack
+        caption: |
+          <p>2025.07 ~ 운영중</p>
+        quote: >
+          AI기반 법률 상담 업무 자동화 플랫폼
+        description: | # this will include new lines to allow paragraphs
+          **멀티 모듈 아키텍처 설계 및 구현 주도**
+          - domain: JPA Entity 중심의 라이브러리형 모듈
+          - admin: 관리자 API, 정보 수집 중심의 모듈
+          - worker: 사용자 API, 업무 자동화 처리 중심의 모듈
+          
+          **Admin 모듈 개발**
+          - worker 모듈 인스턴스 헬스체크 API 구현
+          - OpenFeign을 활용해 외부 웹 데이터를 스크래핑하여 실시간 정보 수집
+          
+          **Worker 모듈 개발**
+          - OpenAI API를 통한 질문 적합성 검토 및 승인/미승인 기능 구현
+          - 질문 적합성 결과 승인된 작업에 대해 AI 기반 법률 상담 답변 생성 기능 구현
+          - 1차 자동화처리된 항목에 대해 사용자가 검토할 수 있도록 offset 기반 페이징처리 및 생성일 기준 오름차순, 내림차순 정렬을 지원하는 리스트 조회 구현
+          - 사용자가 AI기반으로 자동화처리된 작업을 검토하고 승인한 항목에 대해 Selenium기반 자동 답변 작성 기능 구현
+          - 사용자가 전체적인 작업 (일일 건수, 일/월별 그래프)현황 모니터링이 가능 하도록 대시보드 구현
+
+          **CI/CD 및 코드 품질 관리**
+          - ktlint 기반 코드 컨벤션 검사를 CI 파이프라인에 적용하여 일관된 코드 품질 유지
+          - CD 스크립트 자동화를 통해 사용자별 전용 서버 (1 User : 1 Server) 로 구성하여 Worker 서버 5대 병렬 배포 설계
+          - admin-domain(관리자 서버), worker-domain(사용자 서버) 별 분리 배포 설계
+          
+          **개선 사항**
+          - 대시보드 통계 API의 다중 DB 조회 로직을 코루틴 비동기 처리로 응답 속도 최대 73% 향상
+          - DB Connection Pool 튜닝을 통해 병렬 처리 시 발생 가능한 리소스 경합 문제 해결
+          - MDCContext + Logback을 통한 비동기 처리 작업 로그를 traceId로 관리하여 로그 추적성을 보장
+          - Query EXPLAIN을 분석하여 운영환경에서 지연되는 조회 및 검색 성능 개선
+          
+          **기술 스택**
+          - **Backend**: Kotlin, SpringBoot, JPA, QueryDSL, Selenium, OpenFeign, OpenAI, ClaudeAI, Ktlint, Thymeleaf
+          - **Frontend**: JavaScript, Tailwind CSS, Chart.js
+          - **Database**: MySQL
+          - **DevOps**: Docker, AWS (EC2, RDS, SES, CloudWatch)
+          - **Tools**: Git
+               
+          ---
+
       - layout: left
         title: 구똑 - 구독을 똑똑하게
         sub_title: Backend
